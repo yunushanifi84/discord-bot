@@ -10,6 +10,7 @@ module.exports = {
   execute(client) {
     console.log("Bot başarıyla bağlandı");
     loadCommands(client);
+
     ////////////////////////////////////////////////////////////////////////////////////
     //Bot aktivitesi ayarı
     client.user.setPresence({

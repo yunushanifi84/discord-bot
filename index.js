@@ -5,14 +5,20 @@ const {
   Collection,
 } = require("discord.js");
 const { User, Message, GuildMember, ThreadMember } = Partials;
-
+const {
+  Guilds,
+  GuildMessages,
+  MessageContent,
+  GuildMessageReactions,
+  GuildVoiceStates,
+} = GatewayIntentBits;
 const client = new Client({
   intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.MessageContent,
-    GatewayIntentBits.GuildMessageReactions,
-    GatewayIntentBits.GuildVoiceStates,
+    Guilds,
+    GuildMessages,
+    MessageContent,
+    GuildMessageReactions,
+    GuildVoiceStates,
   ],
   partials: [User, Message, GuildMember, ThreadMember],
 });
