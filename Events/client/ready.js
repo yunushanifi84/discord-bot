@@ -2,6 +2,7 @@ const { loadCommands } = require("../../handlers/commandHandler");
 const { Client, ActivityType } = require("discord.js");
 module.exports = {
   name: "ready",
+  displayName: "Ready",
   once: true,
   /**
    *

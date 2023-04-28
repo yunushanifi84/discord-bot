@@ -2,6 +2,7 @@ const { Message } = require("discord.js");
 
 module.exports = {
   name: "messageCreate",
+  displayName: "Message",
   /**
    *
    * @param {Message} message

@@ -2,6 +2,7 @@ const { Message, Client, EmbedBuilder } = require("discord.js");
 const { logchannelid, loggerstate } = require("../../config.json");
 module.exports = {
   name: "messageCreate",
+  displayName: "MLogger",
   /**
    *
    * @param {Message} message
@@ -9,7 +10,7 @@ module.exports = {
    */
   async execute(message, client) {
     if (message.author.bot) return;
-    if (message.channel.id == "1053726991309877269") return;
+    if (message.guild.id == "787718450206343218") return;
     if (loggerstate == "1") {
       const logchannel = client.channels.cache.get(logchannelid);
       const messageEmbed = new EmbedBuilder()

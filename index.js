@@ -27,6 +27,14 @@ const { loadEvents } = require("./handlers/eventHandler");
 client.config = require("./config.json");
 client.events = new Collection();
 client.commands = new Collection();
+client.subCommands = new Collection();
+
 loadEvents(client);
 
+const mongoose = require("mongoose");
+mongoose
+  .connect(client.config.databaseUrl, {})
+  .then(() => console.log("Veritabanı Bağlantısı Sağlandı"));
+
+client.database = mongoose;
 client.login(client.config.token);

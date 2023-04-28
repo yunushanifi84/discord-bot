@@ -1,0 +1,19 @@
+{
+    "type": 2,
+    "application_id": "624187616312426512",
+    "guild_id": "787718450206343218",
+    "channel_id": "1082633377095614534",
+    "session_id": "8e3f574cd0853a86f2a88f07b697b114",
+    "data": {
+        "version": "1081513164425932862",
+        "id": "1081513163851313212",
+        "name": "character",
+        "type": 1,
+        "options":[{
+            "type": 3,
+            "name": "secenek",
+            "value": "goruntule"
+        }]
+    }
+     
+}

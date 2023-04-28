@@ -40,6 +40,7 @@ module.exports = {
           { name: "İzliyor", value: "Watching" }
         )
     ),
+  hasESub: false,
   /**
    *
    * @param {ChatInputCommandInteraction} interaction
