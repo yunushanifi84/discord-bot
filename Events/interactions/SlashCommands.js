@@ -2,7 +2,7 @@ const { ChatInputCommandInteraction } = require("discord.js");
 
 module.exports = {
   name: "interactionCreate",
-  displayName: "SlashCommands",
+  displayName: "Slash Commands",
   /**
    *
    * @param { ChatInputCommandInteraction} interaction
@@ -16,7 +16,6 @@ module.exports = {
         content: "Görümüşe göre bu komutun süresi bitmiş.",
         ephemeral: true,
       });
-
     if (command.developer && interaction.user.id !== client.config.adminid)
       return interaction.reply("Bu komut Sadece Geliştiriciye özel.");
 

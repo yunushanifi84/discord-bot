@@ -1,11 +1,13 @@
 async function loadCommands(client) {
   const { loadFiles } = require("../functions/fileLoader");
+  const { loadApplications } = require("./applicationHandler");
   const ascii = require("ascii-table");
-  const table = new ascii().setHeading("Commands", "Status");
+  const commandtable = new ascii().setHeading("Commands", "Status");
+  const applicationtable = new ascii().setHeading("Applications", "Status");
 
   await client.commands.clear();
   await client.subCommands.clear();
-
+  await client.applications.clear();
   let CommandsArray = [];
 
   const Files = await loadFiles("Commands");
@@ -19,11 +21,20 @@ async function loadCommands(client) {
 
     CommandsArray.push(command.data.toJSON());
 
-    table.addRow(command.data.name, "✅   +");
+    commandtable.addRow(command.data.name, "✅   +");
+  });
+  const AppFiles = await loadFiles("Applications");
+  AppFiles.forEach((AppFiles) => {
+    const application = require(AppFiles);
+    client.applications.set(application.data.name, application);
+
+    CommandsArray.push(application.data.toJSON());
+
+    applicationtable.addRow(application.displayName, "✅   +");
   });
   client.application.commands.set(CommandsArray);
-
-  return console.log(table.toString(), "\n Komutlar Yüklendi.");
+  console.log(commandtable.toString(), "\n Komutlar Yüklendi.");
+  return console.log(applicationtable.toString(), "\n Aplikasyonlar Yüklendi.");
 }
 
 module.exports = { loadCommands };

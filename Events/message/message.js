@@ -8,6 +8,7 @@ module.exports = {
    * @param {Message} message
    */
   async execute(message) {
+    if (message.author.bot) return;
     if (message.content.toLowerCase() == "naber aga") {
       message.reply(`İyiyim Senden naber ${message.member.displayName}`);
     }

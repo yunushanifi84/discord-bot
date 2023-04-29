@@ -1,0 +1,12 @@
+const {
+  ContextMenuCommandBuilder,
+  ApplicationCommandType,
+  ContextMenuCommandInteraction,
+} = require("discord.js");
+
+
+module.exports = {
+    data:new ContextMenuCommandBuilder()
+        .setName("cevir")
+        .setType(ApplicationCommandType.Message)
+}
