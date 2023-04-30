@@ -7,6 +7,7 @@ const {
 
 module.exports = {
   subCommand: "bot.bakiye",
+  hasApp: false,
   /**
    *
    * @param {ChatInputCommandInteraction} interaction

@@ -11,11 +11,12 @@ module.exports = {
     if (!interaction.isChatInputCommand()) return;
 
     const command = client.commands.get(interaction.commandName);
-    if (!command)
+    if (!command) {
       return interaction.reply({
         content: "Görümüşe göre bu komutun süresi bitmiş.",
         ephemeral: true,
       });
+    }
     if (command.developer && interaction.user.id !== client.config.adminid)
       return interaction.reply("Bu komut Sadece Geliştiriciye özel.");
 

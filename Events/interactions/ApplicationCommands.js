@@ -11,14 +11,14 @@ module.exports = {
    * @param { ContextMenuCommandInteraction} interaction
    */
   execute(interaction, client) {
-    if (!interaction.isContextMenuCommand) return;
+    if (!interaction.isContextMenuCommand()) return;
     const application = client.applications.get(interaction.commandName);
-    if (!application)
+    if (!application) {
       return interaction.reply({
         content: "Görümüşe göre bu applikasyonun süresi bitmiş.",
         ephemeral: true,
       });
-
+    }
     application.execute(interaction, client);
   },
 };

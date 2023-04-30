@@ -1,6 +1,5 @@
 async function loadCommands(client) {
   const { loadFiles } = require("../functions/fileLoader");
-  const { loadApplications } = require("./applicationHandler");
   const ascii = require("ascii-table");
   const commandtable = new ascii().setHeading("Commands", "Status");
   const applicationtable = new ascii().setHeading("Applications", "Status");

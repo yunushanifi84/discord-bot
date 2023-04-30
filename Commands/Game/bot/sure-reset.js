@@ -2,6 +2,7 @@ const { ChatInputCommandInteraction, EmbedBuilder } = require("discord.js");
 
 module.exports = {
   subCommand: "bot.sure-reset",
+  hasApp: false,
   /**
    *
    * @param {ChatInputCommandInteraction} interaction

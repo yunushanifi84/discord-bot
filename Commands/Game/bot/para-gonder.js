@@ -6,6 +6,7 @@ const {
 
 module.exports = {
   subCommand: "bot.para-gonder",
+  hasApp: false,
   /**
    *
    * @param {ChatInputCommandInteraction} interaction

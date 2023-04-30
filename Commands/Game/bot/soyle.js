@@ -2,6 +2,7 @@ const { ChatInputCommandInteraction, EmbedBuilder } = require("discord.js");
 
 module.exports = {
   subCommand: "bot.soyle",
+  hasApp: false,
   /**
    *
    * @param {ChatInputCommandInteraction} interaction

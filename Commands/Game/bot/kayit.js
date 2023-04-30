@@ -2,6 +2,7 @@ const { ChatInputCommandInteraction } = require("discord.js");
 
 module.exports = {
   subCommand: "bot.kayit",
+  hasApp: false,
   /**
    *
    * @param {ChatInputCommandInteraction} interaction
