@@ -37,5 +37,6 @@ module.exports = {
       nufus: nufusu,
     });
     town.save();
+    interaction.editReply("Tamam.");
   },
 };
