@@ -26,8 +26,16 @@ module.exports = {
     const sehirPlakasi = interaction.options.getString("sehir");
     const sehirismi = townConvert(sehirPlakasi);
     const ilce_ismi = interaction.options.getString("ilce-ismi");
-    const nufus = interaction.options.getNumber("ilce-nufusu");
+    const nufusu = interaction.options.getNumber("ilce-nufusu");
 
-    const Town = client.databaseModels.Town;
+    const Towns = client.databaseModels.Towns;
+    const Town = mongoose.model("Towns", Towns);
+    let town = new Town({
+      sehirId: sehirPlakasi,
+      Sehir: sehirismi,
+      isim: ilce_ismi,
+      nufus: nufusu,
+    });
+    town.save();
   },
 };
