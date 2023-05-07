@@ -10,16 +10,7 @@ module.exports = {
   async execute(interaction, client) {
     const mongoose = client.database;
     const adminid = client.config.adminid;
-
-    /////////////////////////////////////////////////////////////
-    const userbotSchema = new mongoose.Schema({
-      id: String,
-      money: { type: Number, default: 0 },
-      nextPrize: { type: Date, default: Date.now },
-      DisplayName: String,
-    });
-
-    /////////////////////////////////////////////////////////////
+    const userbotSchema = client.databaseSchemas.userbotSchema;
     const { options } = interaction;
     if (mongoose.connection.models["Kullanici-data"]) {
       delete mongoose.connection.models["Kullanici-data"];

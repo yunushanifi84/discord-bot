@@ -11,6 +11,9 @@ module.exports = {
     )
     .addSubcommand((options) =>
       options.setName("commands").setDescription("Komutları yeniler")
+    )
+    .addSubcommand((options) =>
+      options.setName("commands-delete").setDescription("Komutları siler.")
     ),
   hasESub: true,
 };

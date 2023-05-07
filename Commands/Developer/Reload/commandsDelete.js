@@ -7,13 +7,8 @@ const {
 } = require("discord.js");
 
 module.exports = {
-  data: new SlashCommandBuilder()
-    .setName("komut-sil")
-    .setDescription("Komutları temizler.")
-    .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
-  hasESub: false,
+  subCommand: "reload.commands-delete",
   hasApp: false,
-  displayName: "Komut silici",
   /**
    *
    * @param {ChatInputCommandInteraction} interaction

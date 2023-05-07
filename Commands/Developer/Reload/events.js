@@ -1,4 +1,8 @@
-const { ChatInputCommandInteraction, Client } = require("discord.js");
+const {
+  ChatInputCommandInteraction,
+  Client,
+  EmbedBuilder,
+} = require("discord.js");
 const { loadEvents } = require("../../../handlers/eventHandler");
 module.exports = {
   subCommand: "reload.events",
@@ -11,6 +15,7 @@ module.exports = {
     for (const [key, value] of client.events)
       client.removeListener(`${key}`, value, true);
     loadEvents(client);
-    interaction.reply("Eventler yenilendi.");
+    const succEmbed = new EmbedBuilder().setTitle("Eventler Yenilendi.  ✅");
+    return interaction.reply({ embeds: [succEmbed] });
   },
 };

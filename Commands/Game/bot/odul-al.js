@@ -9,15 +9,7 @@ module.exports = {
    */
   async execute(interaction, client) {
     const mongoose = client.database;
-
-    ///////////////////////////////////////////////////////////////////
-    const userbotSchema = new mongoose.Schema({
-      id: String,
-      money: { type: Number, default: 0 },
-      nextPrize: { type: Date, default: Date.now },
-      DisplayName: String,
-    });
-    ///////////////////////////////////////////////////////////////////
+    const userbotSchema = client.databaseSchemas.userbotSchema;
     const { randomint, sleep } = require("../../../functions/basic_functions");
 
     if (mongoose.connection.models["Kullanici-data"]) {

@@ -20,5 +20,13 @@ module.exports = {
       status: "online",
     });
     ////////////////////////////////////////////////////////////////////////////////////
+    const mongoose = require("mongoose");
+    mongoose
+      .connect(client.config.databaseUrl, {})
+      .then(() => console.log("Veritabanı Bağlantısı Sağlandı"));
+
+    client.database = mongoose;
+    //burada şema özelliğini de tanımlıyoruz ki boş değer atamasın
+    client.databaseSchemas = {};
   },
 };
