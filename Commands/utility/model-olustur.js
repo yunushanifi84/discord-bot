@@ -21,7 +21,7 @@ module.exports = {
     const mongoose = client.database;
     const TownNumberSchema = client.databaseSchemas.townNumber;
     const TownNumber = mongoose.model("Town-Count", TownNumberSchema);
-    let town = await new townNumber();
+    let town = await new TownNumber();
     town.save();
 
     const succEmbed = new EmbedBuilder()
