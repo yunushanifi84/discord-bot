@@ -13,7 +13,7 @@ module.exports = {
    * @param {ChatInputCommandInteraction} interaction
    * @param {Client} client
    */
-  async exectue(interaction, client) {
+  async execute(interaction, client) {
     const mongoose = client.database;
     const TownNumberSchema = client.databaseSchemas.townNumber;
     const TownNumber = mongoose.model("Town-Count", TownNumberSchema);
