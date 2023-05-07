@@ -17,9 +17,9 @@ module.exports = {
     const mongoose = client.database;
     const TownNumberSchema = client.databaseSchemas.townNumber;
     const TownNumber = mongoose.model("Town-Count", TownNumberSchema);
-    let townNumber = TownNumber.findOne({ id: "Main" });
+    let townNumber = await TownNumber.findOne({ id: "Main" });
     townNumber.TotalTowns += 1;
-    townNumber.save();
-    interaction.reply("Arttırıldı.");
+    await townNumber.save();
+    return interaction.reply("Arttırıldı.");
   },
 };
