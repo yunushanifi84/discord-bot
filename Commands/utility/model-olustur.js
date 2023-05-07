@@ -20,7 +20,7 @@ module.exports = {
   async execute(interaction, client) {
     const mongoose = client.database;
     const TownNumberSchema = client.databaseSchemas.townNumber;
-    const TownNumber = mongoose.model("Town-Game", TownNumberSchema);
+    const TownNumber = mongoose.model("Town-Count", TownNumberSchema);
 
     const succEmbed = new EmbedBuilder()
       .setTitle("Model oluşumu Başarılı!!")
