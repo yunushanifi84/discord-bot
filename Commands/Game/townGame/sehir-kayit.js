@@ -28,7 +28,7 @@ module.exports = {
     const ilce_ismi = interaction.options.getString("ilce-ismi");
     const nufusu = interaction.options.getNumber("ilce-nufusu");
 
-    const Towns = client.databaseModels.Towns;
+    const Towns = client.databaseSchemas.Towns;
     const Town = mongoose.model("Towns", Towns);
     let town = new Town({
       sehirId: sehirPlakasi,
