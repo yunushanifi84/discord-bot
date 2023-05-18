@@ -35,6 +35,7 @@ module.exports = {
       isim: String,
       nufus: Number,
       MiktarBasinaUcret: Number,
+      TownRegID: Number,
       parsel1: { type: String, default: "Unowned" },
       parsel2: { type: String, default: "Unowned" },
       parsel3: { type: String, default: "Unowned" },
@@ -142,6 +143,7 @@ module.exports = {
       Money: Number,
       OwnedSites: [UserTowns],
     });
+
     //////////////////////////////////////////////////////////////7
     client.databaseSchemas.userbotSchema = userbotSchema;
 

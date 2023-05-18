@@ -9,6 +9,7 @@ async function loadCommands(client) {
   await client.applications.clear();
   let CommandsArray = [];
 
+  //Komut dosyalarını işleme
   const Files = await loadFiles("Commands");
   Files.forEach((file) => {
     const command = require(file);
@@ -22,6 +23,7 @@ async function loadCommands(client) {
 
     commandtable.addRow(command.data.name, "✅   +");
   });
+  //Application dosyalarını işleme
   const AppFiles = await loadFiles("Applications");
   AppFiles.forEach((AppFiles) => {
     const application = require(AppFiles);
@@ -31,7 +33,11 @@ async function loadCommands(client) {
 
     applicationtable.addRow(application.displayName, "✅   +");
   });
+  //komut dizilerini application metoduna ekleme
+
   client.application.commands.set(CommandsArray);
+
+  //Ascii görüntüsü ile kontrol
   console.log(commandtable.toString(), "\n Komutlar Yüklendi.");
   return console.log(applicationtable.toString(), "\n Aplikasyonlar Yüklendi.");
 }

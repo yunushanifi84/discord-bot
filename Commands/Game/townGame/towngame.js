@@ -1,4 +1,4 @@
-const { SlashCommandBuilder } = require("discord.js");
+const { SlashCommandBuilder, PermissionFlagsBits } = require("discord.js");
 
 module.exports = {
   hasESub: true,
@@ -36,5 +36,10 @@ module.exports = {
             .setDescription("Kaydeteceğiniz ilçenin nufusu")
             .setRequired(true)
         )
+    )
+    .addSubcommand((options) =>
+      options
+        .setName("sehir-sayisi")
+        .setDescription("Veritabanındaki şehir sayısı hakkında bilgi verir.")
     ),
 };

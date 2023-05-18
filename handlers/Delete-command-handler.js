@@ -5,6 +5,7 @@ async function deleteCommands(client) {
   await client.commands.clear();
   await client.subCommands.clear();
   await client.applications.clear();
+  //bu handler komutları silmek için tasarlandı!
   let CommandsArray = [];
 
   const Files = await loadFiles("Commands/Developer/Reload");
