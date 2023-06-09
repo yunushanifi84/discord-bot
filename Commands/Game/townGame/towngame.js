@@ -14,14 +14,6 @@ module.exports = {
           option
             .setName("sehir")
             .setDescription("İlçenin bulunduğu şehir")
-            .addChoices(
-              { name: "Adana", value: "01" },
-              { name: "Adıyaman", value: "02" },
-              { name: "Afyon", value: "03" },
-              { name: "Ağrı", value: "04" },
-              { name: "Amasya", value: "05" },
-              { name: "Ankara", value: "06" }
-            )
             .setRequired(true)
         )
         .addStringOption((option) =>
@@ -41,5 +33,16 @@ module.exports = {
       options
         .setName("sehir-sayisi")
         .setDescription("Veritabanındaki şehir sayısı hakkında bilgi verir.")
+    )
+    .addSubcommand((options) =>
+      options
+        .setName("tum-sehirler")
+        .setDescription("Tüm şehirleri gösteren bir liste")
+        .addStringOption((option) =>
+          option
+            .setName("sehir")
+            .setDescription("Hedef Şehir")
+            .setRequired(true)
+        )
     ),
 };

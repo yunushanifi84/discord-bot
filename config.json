@@ -9,5 +9,7 @@
   "databaseUrl": "",
 
   "//yorum2": "Bu ayarda bu dosyanın çalışacağı makinenin linux olup olmadığına bağlı.",
-  "vmstate": "1"
+  "vmstate": "0",
+  "//yorum3": "xrapid api keyi",
+  "xrapidApi": ""
 }

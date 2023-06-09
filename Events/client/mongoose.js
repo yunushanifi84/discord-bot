@@ -8,11 +8,9 @@ module.exports = {
   /**
    *
    * @param {Client} client
-   * @param {db} mongoose
    */
   async execute(client) {
     const mongoose = client.database;
-
     const userbotSchema = new mongoose.Schema({
       id: String,
       money: { type: Number, default: 0 },
