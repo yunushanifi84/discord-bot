@@ -23,7 +23,7 @@ module.exports = {
    * @param {ChatInputCommandInteraction} interaction
    */
   async execute(interaction, client) {
-    interaction.deferReply({ ephemeral: true });
+    interaction.deferReply();
     let sayi = 1;
     sayi = interaction.options.getNumber("sayi");
     const xrapidapiKey = client.config.xrapidApi;
