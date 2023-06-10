@@ -13,7 +13,7 @@ module.exports = {
     .setType(ApplicationCommandType.Message),
   hasESub: false,
   hasApp: true,
-  displayName: "Çevir",
+  displayName: "Çevir |tr|",
   /**
    *
    * @param {MessageContextMenuCommandInteraction} interaction
